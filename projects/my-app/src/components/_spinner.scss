@@ -1,0 +1,23 @@
+@import './theme';
+
+$spinner-track-color: $lightgray;
+$spinner-active-color: $accent;
+
+@mixin spinner($bgColor: $spinner-track-color, $activeColor: $spinner-active-color) {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.2em solid $bgColor;
+  border-top: 0.2em solid $activeColor;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  @include spinner();
+}

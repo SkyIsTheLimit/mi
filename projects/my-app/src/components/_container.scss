@@ -1,0 +1,17 @@
+.container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+
+  &.grid {
+    display: grid;
+  }
+
+  &.two-column {
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+  }
+
+  &.three-column {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}

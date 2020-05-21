@@ -1,0 +1,8 @@
+<div class="progress-spinner">
+  <div class="spinner-container" *ngIf="showSpinner">
+    <span class="spinner"></span>
+  </div>
+  <div class="progress-container" *ngIf="showProgress">
+    <span class="progress">{{ this.progress }} %</span>
+  </div>
+</div>

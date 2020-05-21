@@ -1,0 +1,9 @@
+@import './theme';
+
+.card {
+  display: inline-block;
+  background-color: $white;
+  color: $black;
+  margin: 0.5em;
+  padding: 1em;
+}

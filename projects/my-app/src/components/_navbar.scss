@@ -1,0 +1,33 @@
+@import './theme';
+
+$navbar-bg: black;
+$navbar-text-color: white;
+
+.navbar {
+  display: flex;
+  background: $navbar-bg;
+  padding: 1rem;
+  justify-content: space-between;
+  
+  h1 {
+    color: $navbar-text-color;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .links {
+    a {
+      color: white;
+      font-weight: bold;
+      margin-left: 1em;
+      text-decoration: none;
+    }
+
+    .active {
+      color: $accent;
+    }
+  }
+}

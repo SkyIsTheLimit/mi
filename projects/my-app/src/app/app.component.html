@@ -1,0 +1,14 @@
+<div class="navbar">
+  <h1>Micro Interactions</h1>
+
+  <div class="links">
+    <a [routerLink]="''" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a [routerLink]="'another'" routerLinkActive="active">Another Route</a>
+    <a [routerLink]="'third'" routerLinkActive="active">Third Route</a>
+    <a [routerLink]="'fourth'" routerLinkActive="active">Fourth Route</a>
+  </div>
+</div>
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

@@ -1,0 +1,24 @@
+button {
+  &.is-loading {
+    &::before {
+      margin-right: 0.5em;
+      @include button-spinner();
+    }
+  }
+
+  &.with-spinner {
+    &.on-left {
+      &::before {
+        margin-right: 0.5em;
+        @include button-spinner();
+      }
+    }
+
+    &.on-right {
+      &::after {
+        margin-left: 0.5em;
+        @include button-spinner();
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<div class="container grid three-column">
+  <div class="card">
+    <h1>Images</h1>
+
+    <div class="grid container two-column">
+      <img style="width: 100%" src="https://placeimg.com/300/300/animals" alt="">
+      <img style="width: 100%" src="https://placeimg.com/300/300/animals" alt="">
+      <img style="width: 100%" src="https://placeimg.com/300/300/animals" alt="">
+      <img style="width: 100%" src="https://placeimg.com/300/300/animals" alt="">
+    </div>
+  </div>
+
+  <div class="card">
+    <h1>Loading Buttons</h1>
+
+    <h2>CSS Interactions</h2>
+    <div>
+      <button [class.is-loading]="isSpinner" [disabled]="isDisabled">Hello</button>
+
+      <label for="add-spinner">
+        <input type="checkbox" id="add-spinner" [checked]="isSpinner" (change)="isSpinner = !isSpinner" />
+        Spinner
+      </label>
+
+      <label for="add-disabled">
+        <input type="checkbox" id="add-disabled" [checked]="isDisabled" (change)="isDisabled = !isDisabled" />
+        Disabled
+      </label>
+    </div>
+
+    <div>
+      <button (click)="loadData()" [class.is-loading]="isDataLoading" [disabled]="isDataLoading">
+        Load Data
+      </button>
+    </div>
+
+    <h2>Angular Directive Interaction</h2>
+    <div>
+      <button [isLoading]="isDataLoading" [progress]="progress" (click)="loadData()">Get Data</button>
+
+      <button [isLoading]="isProgressBarDataLoading" [progress]="progress" [progressBar]="showProgressBar"
+        (click)="loadDataWithProgressBar()">This button adds
+        progress bar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="spinner" style="font-size: 48px; display: block; margin: 50px auto"></div>
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quidem nostrum
+      obcaecati reiciendis error
+      facere!
+      Amet voluptates nulla molestiae illum molestias odio consectetur, quasi exercitationem impedit dolorem voluptas
+      labore incidunt.</p>
+  </div>
+</div>

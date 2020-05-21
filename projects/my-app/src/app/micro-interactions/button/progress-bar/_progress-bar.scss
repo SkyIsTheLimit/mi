@@ -1,0 +1,11 @@
+@import '../../../../components/theme';
+
+.progress-bar {
+  position: fixed;
+  background: $accent;
+  height: 5px;
+  width: 50%;
+  left: 0;
+  top: 0;
+  right: 0;
+}

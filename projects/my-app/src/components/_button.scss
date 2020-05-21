@@ -1,0 +1,47 @@
+@import './theme';
+@import './spinner';
+
+$button-bg: $primary;
+$button-color: $white;
+
+@mixin button-spinner {
+  content: '.';
+  color: transparent;
+  font-size: 0.8em;
+  @include spinner($button-color, $button-bg);
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  color: $button-color;
+  background: $button-bg;
+  padding: 5px 10px;
+  margin: 0.25em 1em 0.25em 0;
+  font-weight: bold;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+  
+  &:hover {
+    box-shadow: inset -4px -4px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    bottom: 0;
+    right: 0;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.8;
+    bottom: 0;
+    right: 0;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
